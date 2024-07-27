@@ -3,8 +3,13 @@ Python bindings for the [Surge Synth Team Tuning Library](https://github.com/sur
 
 ## Installation
 
+To install from PyPI:
 ```console
-$ git clone --recurse-submodules https://github.com/narenratan/tuning-library-python.git
+$ pip install tuning_library
+```
+or to clone the repo and install from source:
+```console
+$ git clone --recurse-submodules https://github.com/surge-synthesizer/tuning-library-python.git
 $ cd tuning-library-python
 $ python3 -m pip install .
 ```
