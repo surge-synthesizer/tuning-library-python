@@ -35,6 +35,8 @@ tuning = tl.Tuning(scale, mapping)
 f = tuning.frequency_for_midi_note(69)
 ```
 
+There are some scripts which use `tuning_library` in the examples directory in the repo.
+
 ## Wrapper names
 
 The names in the C++ Tuning Library and this Python wrapper correspond as follows
