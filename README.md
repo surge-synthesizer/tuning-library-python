@@ -5,7 +5,7 @@ Python bindings for the [Surge Synth Team Tuning Library](https://github.com/sur
 
 To install from PyPI:
 ```console
-$ pip install tuning_library
+$ pip install tuning-library
 ```
 or to clone the repo and install from source:
 ```console
@@ -34,6 +34,8 @@ mapping = tl.read_kbm_file("mapping.kbm")
 tuning = tl.Tuning(scale, mapping)
 f = tuning.frequency_for_midi_note(69)
 ```
+
+There are some scripts which use `tuning_library` in the examples directory in the repo.
 
 ## Wrapper names
 
