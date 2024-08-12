@@ -5,7 +5,7 @@ Python bindings for the [Surge Synth Team Tuning Library](https://github.com/sur
 
 To install from PyPI:
 ```console
-$ pip install tuning_library
+$ pip install tuning-library
 ```
 or to clone the repo and install from source:
 ```console
