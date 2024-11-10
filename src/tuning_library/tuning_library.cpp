@@ -75,7 +75,8 @@ PYBIND11_MODULE(_tuning_library, m)
     m.def(
         "parse_scl_data",
         &Tunings::parseSCLData,
-        "parseSCLData returns a scale from the SCL file contents in memory"
+        "parseSCLData returns a scale from the SCL file contents in memory",
+        py::arg("scl_contents")
     );
 
     m.def(
@@ -89,7 +90,9 @@ PYBIND11_MODULE(_tuning_library, m)
         &Tunings::evenDivisionOfSpanByM,
         "evenDivisionOfSpanByM provides a scale referred to as \"ED2-17\" or "
         "\"ED3-24\" by dividing the Span into M points. eventDivisionOfSpanByM(2,12) "
-        "should be the evenTemperament12NoteScale"
+        "should be the evenTemperament12NoteScale",
+        py::arg("span"),
+        py::arg("M")
     );
 
     m.def(
@@ -113,28 +116,35 @@ PYBIND11_MODULE(_tuning_library, m)
     m.def(
         "parse_kbm_data",
         &Tunings::parseKBMData,
-        "parseKBMData returns a KeyboardMapping from a KBM data in memory"
+        "parseKBMData returns a KeyboardMapping from a KBM data in memory",
+        py::arg("kbm_contents")
     );
 
     m.def(
         "tune_A69_to",
         &Tunings::tuneA69To,
         "tuneA69To creates a KeyboardMapping which keeps the midi note 69 (A4) set "
-        "to a constant frequency, given"
+        "to a constant frequency, given",
+        py::arg("freq")
     );
 
     m.def(
         "tune_note_to",
         &Tunings::tuneNoteTo,
         "tuneNoteTo creates a KeyboardMapping which keeps the midi note given is set "
-        "to a constant frequency, given"
+        "to a constant frequency, given",
+        py::arg("midi_note"),
+        py::arg("freq")
     );
 
     m.def(
         "start_scale_on_and_tune_note_to",
         &Tunings::startScaleOnAndTuneNoteTo,
         "startScaleOnAndTuneNoteTo generates a KBM where scaleStart is the note 0 "
-        "of the scale, where midiNote is the tuned note, and where freq is the frequency"
+        "of the scale, where midiNote is the tuned note, and where freq is the frequency",
+        py::arg("scale_start"),
+        py::arg("midi_note"),
+        py::arg("freq")
     );
 
     py::class_<Tunings::Tuning>(m, "Tuning")
