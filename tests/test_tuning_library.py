@@ -328,6 +328,12 @@ def test_tune_note_to():
     assert mapping.tuning_frequency == 441.0
 
 
+def test_tune_note_to_named_args():
+    mapping = tl.tune_note_to(freq=441.0, midi_note=68)
+    assert mapping.tuning_constant_note == 68
+    assert mapping.tuning_frequency == 441.0
+
+
 def test_start_scale_on_and_tune_note_to():
     mapping = tl.start_scale_on_and_tune_note_to(10, 68, 441.0)
     assert mapping.middle_note == 10
