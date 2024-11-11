@@ -4,7 +4,7 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "tuning_library"
-version = "0.0.0"
+version = "0.0.1"
 description = "Python bindings for the Surge Synth Team Tuning Library"
 authors = [
   { name="Naren Ratan" },
