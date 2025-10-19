@@ -4,14 +4,14 @@ build-backend = "scikit_build_core.build"
 
 [project]
 name = "tuning_library"
-version = "0.0.1"
+version = "0.1.0"
 description = "Python bindings for the Surge Synth Team Tuning Library"
 authors = [
   { name="Naren Ratan" },
 ]
 license = {file = "LICENSE"}
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 
 [project.urls]
 Homepage = "https://github.com/surge-synthesizer/tuning-library-python"
