@@ -1,3 +1,6 @@
+# /// script
+# dependencies = ["tuning-library"]
+# ///
 """
 Find scales similar to a given scale.
 
@@ -103,6 +106,7 @@ def find_similar_scales(target_scale_filename, tolerance, scale_directory=None):
         for n in range(len(cents)):
             mode_cents = sorted((x - cents[n]) % period for x in cents)
             max_diff = max(abs(mode_cents[i] - x) for i, x in enumerate(target_cents))
+            max_diff = max(abs(period - target_scale.tones[-1].cents), max_diff)
             if max_diff <= tolerance:
                 similar_scales.append((scale, n, max_diff))
     return similar_scales

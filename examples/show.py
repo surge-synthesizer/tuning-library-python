@@ -1,3 +1,6 @@
+# /// script
+# dependencies = ["tuning-library"]
+# ///
 """
 Show step, interval, and mode diagrams for a scale.
 
